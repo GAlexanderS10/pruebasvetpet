@@ -1,0 +1,205 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .form-servicios {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-servicios {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #036e86;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #05bbe3;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .container-servicio {
+    display: flex;
+    margin: 0;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .servicio {
+    margin: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .btn-agregar-servicio {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #036e86;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .btn-agregar-servicio:hover {
+    background-color: #05bbe3;
+  }
+  
+  .btn-agregar-servicio:focus {
+    outline: none;
+  }
+  
+  .contenedor-registrar-servicio {
+    padding-bottom: 50px;
+  }
+  
+  .contenedor-datos-servicios {
+    padding: 10px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    display: grid;
+    background-color: aliceblue;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    box-shadow: 0 5px 15px 0 rgba(39, 39, 39, 0.625);
+  }
+  
+  .campo-datos-servicios {
+    background-color: #fff;
+    color: black;
+    font-weight: 700;
+    padding: 10px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 5px 15px 0 rgba(1, 90, 35, 0.575);
+  }
+  
+  .btn-editar-servicio {
+    width: 150px;
+    background-color: #01235e;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .btn-eliminar-servicio {
+    width: 150px;
+    background-color: #e72e0d;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .btn-editar-servicio:hover {
+    background-color: #4d84e2;
+  }
+  
+  .btn-eliminar-servicio:hover {
+    background-color: #e2664d;
+  }
+  
+  /* Estilos para pantallas con un ancho máximo de 870px */
+  @media (max-width: 870px) {
+    .servicio {
+      width: 90%;
+    }
+  
+    .btn-editar-servicio {
+      height: 35px;
+      margin: 0px 40px;
+    }
+  
+    .btn-eliminar-servicio {
+      height: 35px;
+      margin: 0px 40px;
+    }
+  
+    .contenedor-datos-servicios {
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 20px;
+    }
+  }
+  
+  /* Estilos para pantallas con un ancho máximo de 570px */
+  @media (max-width: 570px) {
+    .servicio {
+      width: 95%;
+    }
+  
+    .contenedor-datos-servicios {
+      grid-template-columns: 1fr;
+      padding-right: 20px;
+    }
+  
+    .btn-agregar-servicio,
+    .btn-editar-servicio,
+    .btn-eliminar-servicio {
+      width: 60%;
+      margin: 0px;
+      margin-left: 45px;
+      height: 30px;
+    }
+  }
+  

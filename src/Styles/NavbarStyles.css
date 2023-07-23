@@ -1,0 +1,177 @@
+.BarraNavegacion{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 rgba(19, 67, 37, 0.625);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+}
+
+.NavegacionLogo img{
+    height: 3rem;
+    width: 10rem;
+    cursor: pointer;
+}
+
+.OpcionesNavegacion{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap: 10px;
+    padding-top: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.EnlacesNavegacion{
+    text-decoration: none;
+    color: rgb(5, 5, 90);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+
+.EnlacesNavegacion i{
+    padding-right: 10px;
+
+}
+
+.EnlacesNavegacion:hover{
+    background-color: rgb(111, 112, 112);
+    color: #fff;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.EnlacesNavegacion-mobile{
+    display: none;
+}
+
+.btnAbrirForm{
+    background-color: #2d1a79;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btnAbrirForm:hover{
+    background-color: #06a35a;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.OpcionesIconos{
+    display: none;
+}
+
+@media screen and (max-width:1100px) {
+
+    .BarraNavegacion{
+        z-index: 99;
+        
+    }
+
+    .OpcionesNavegacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #f9f4f4;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 90px;
+        left: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding: 6px 0 6px 0;
+        margin: 0;
+        z-index: -1;
+        box-shadow: 0 5px 15px 0 rgba(3, 3, 3, 0.625);
+        
+
+    }
+
+    .OpcionesNavegacion.active{
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+        border-radius: 13px;
+    }
+
+    .EnlacesNavegacion{
+
+        display: block;
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .EnlacesNavegacion:hover{
+
+        background: rgb(111, 112, 112);
+        transition: none;
+        
+    }
+    
+    .btnAbrirForm{
+
+        display: none;
+
+    }
+
+    .EnlacesNavegacion-mobile{
+
+        display: block;
+        text-align: center;
+        padding: 0.8rem;
+        margin: auto;
+        border-radius: 20px;
+        width: 45%;
+        background: #2d1a79;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .EnlacesNavegacion-mobile:hover{
+
+        background-color: #06a35a;
+        color: #fff;
+        transition: all 0.4s ease-in-out;
+    }
+
+
+    .OpcionesIconos{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .OpcionesIconos i{
+        font-size: 1.2rem;
+        color:#222;
+    }
+
+    
+}
